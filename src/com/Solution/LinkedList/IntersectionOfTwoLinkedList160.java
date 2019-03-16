@@ -8,7 +8,7 @@ package com.Solution.LinkedList;
  *      最终，他们会在第一个相交结点相遇。若AB没有相交结点，那么他们会最终同时指向null.
  *
  */
-public class IntersectionOfTwoLinkedList {
+public class IntersectionOfTwoLinkedList160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode A=headA;
         ListNode B=headB;
@@ -26,6 +26,6 @@ public class IntersectionOfTwoLinkedList {
         A.next.next=new ListNode(3);
         ListNode B=new ListNode(4);
         B.next=new ListNode(3);
-        ListNode ans=new IntersectionOfTwoLinkedList().getIntersectionNode(A,B);
+        ListNode ans=new IntersectionOfTwoLinkedList160().getIntersectionNode(A,B);
     }
 }
