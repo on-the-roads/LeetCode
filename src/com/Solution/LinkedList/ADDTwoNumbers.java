@@ -80,7 +80,7 @@ public class ADDTwoNumbers {
             l2=l2.next;
         }
         int carry=0;//进位标志
-        ListNode head=new ListNode(-1);
+        ListNode head=null;
         while(!stack1.isEmpty()||!stack2.isEmpty()||carry!=0)
         {
             int x=stack1.isEmpty()?0:stack1.pop();
@@ -88,10 +88,10 @@ public class ADDTwoNumbers {
             int sum=x+y+carry;
             ListNode node=new ListNode(sum%10);
             carry=sum/10;
-            node.next=head.next;
-            head.next=node;
+            node.next=head;
+            head=node;
         }
-        return  head.next;
+        return  head;
     }
 
 
