@@ -24,5 +24,6 @@ public class countSubstrings_647 {
 
     public static void main(String[] args) {
         int ans=new countSubstrings_647().countSubstrings("abc");
+
     }
 }
