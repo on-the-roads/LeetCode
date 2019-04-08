@@ -43,8 +43,7 @@ public class KugouProblem {
     }
 
     private static void find(int[] arr, int index, int sum, int target, boolean[] flags, ArrayList<Integer> list1, ArrayList<Integer> list2) {
-        if (index >= arr.length || sum > target||flag==1)
-            return;
+
         if (sum == target) {
             flag=1;
             for (int i = 0; i < flags.length; i++) {
@@ -55,6 +54,9 @@ public class KugouProblem {
             }
             return;
         }
+
+        if (index >= arr.length || sum > target||flag==1)
+            return;
         //添加该元素
         flags[index] = true;
         sum += arr[index];
