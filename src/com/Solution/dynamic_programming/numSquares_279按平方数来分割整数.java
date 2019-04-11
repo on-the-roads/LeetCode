@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * 题目：给定正整数 n，找到若干个完全平方数（比如 1, 4, 9, 16, ...）使得它们的和等于 n。你需要让组成和的完全平方数的个数最少。
  * 思路：动态规划思想，状态转移方程为dp[n]=Math.min(dp[n],dp[n-square]+1); 其中square为小于等于n的平方数
  */
-public class numSquares_279 {
+public class numSquares_279按平方数来分割整数 {
     public int numSquares(int n) {
         ArrayList<Integer> squareList = getSquareList(n);
         int[] dp = new int[n + 1];
@@ -36,7 +36,7 @@ public class numSquares_279 {
 
 
     public static void main(String[] args) {
-        int ans=new numSquares_279().numSquares(13);
+        int ans=new numSquares_279按平方数来分割整数().numSquares(13);
         System.out.println(ans);
     }
 }
