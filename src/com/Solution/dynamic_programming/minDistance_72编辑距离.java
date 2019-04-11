@@ -17,7 +17,7 @@ package com.Solution.dynamic_programming;
  *
  *  dp[i][j]去上述四种情况的最下值。
  */
-public class minDistance_72 {
+public class minDistance_72编辑距离 {
     public int minDistance(String word1, String word2) {
         int m = word1.length();
         int n = word2.length();
@@ -45,7 +45,7 @@ public class minDistance_72 {
     }
 
     public static void main(String[] args) {
-        int ans=new minDistance_72().minDistance("intention","execution");
+        int ans=new minDistance_72编辑距离().minDistance("intention","execution");
         System.out.println(ans);
     }
 }
