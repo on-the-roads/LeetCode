@@ -9,7 +9,7 @@ package com.Solution.dynamic_programming;
  * 状态转移方程dp[i]=dp[i]||dp[i-num]; 从后往前遍历（w->num）
  * 对方程的说明：当dp[i-num]为真时，dp[i]=dp[i-num+num]肯定也为真
  */
-public class canPartition_416分割等和子集 {
+public class canPartition_416_分割等和子集 {
     public boolean canPartition(int[] nums) {
         int sum=getSum(nums);
         if(sum%2==1)
@@ -35,7 +35,7 @@ public class canPartition_416分割等和子集 {
 
     public static void main(String[] args) {
         int[] nums={1,5,11,5};
-        boolean ans=new canPartition_416分割等和子集().canPartition(nums);
+        boolean ans=new canPartition_416_分割等和子集().canPartition(nums);
         System.out.println(ans);
     }
 }
