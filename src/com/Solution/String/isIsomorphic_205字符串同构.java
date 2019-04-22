@@ -7,7 +7,7 @@ package com.Solution.String;
  * 你可以假设 s 和 t 具有相同的长度。
  * 思路：建立两个数组用来保存字符上一次出现的位置，初始时默认值为0，两个字符串同时向后遍历，当遇到上一个字符出现的位置不相同时说明不是同构字符串。
  */
-public class isIsomorphic_205 {
+public class isIsomorphic_205字符串同构 {
     public boolean isIsomorphic(String s, String t) {
             int[] preindexnum_s=new int[256];
             int[] preindexnum_t=new int[256];
@@ -21,6 +21,6 @@ public class isIsomorphic_205 {
     }
 
     public static void main(String[] args) {
-        boolean ans=new isIsomorphic_205().isIsomorphic("egg","loo");
+        boolean ans=new isIsomorphic_205字符串同构().isIsomorphic("egg","loo");
     }
 }

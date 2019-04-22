@@ -20,7 +20,7 @@ public class canPartition_416分割等和子集 {
         for(int num:nums)
         {
             for (int i = w; i >=num ; i--) {
-                dp[i]=dp[i]||dp[i-num];
+                dp[i]=dp[i]||dp[i-num];// 注意是从后往前！，先计算 dp[i] 再计算 dp[i-num]
             }
         }
         return dp[w];

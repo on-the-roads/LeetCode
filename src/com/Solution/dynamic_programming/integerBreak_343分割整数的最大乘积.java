@@ -5,7 +5,7 @@ package com.Solution.dynamic_programming;
  * 思路1：根据比较小的正整数，对其列举发现规律：当正整数大于4时，正整数应该尽量先拆分一个3出来， 如果剩余数字大于4，则进一步拆分3出来
  * 思路2：动态规划算法
  */
-public class integerBreak_343 {
+public class integerBreak_343分割整数的最大乘积 {
     //思路1
 //    public int integerBreak(int n) {
 //        if(n<=3)
@@ -33,7 +33,7 @@ public class integerBreak_343 {
     }
 
     public static void main(String[] args) {
-        int ans = new integerBreak_343().integerBreak(10);
+        int ans = new integerBreak_343分割整数的最大乘积().integerBreak(10);
         System.out.println(ans);
     }
 }
