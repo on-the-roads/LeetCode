@@ -21,7 +21,6 @@ public class minDistance_72编辑距离 {
     public int minDistance(String word1, String word2) {
         int m = word1.length();
         int n = word2.length();
-        int temp = 0;
         int min = 0;
         int[][] dp = new int[m + 1][n + 1];
         for (int col = 0; col <= n; col++) {
@@ -33,7 +32,6 @@ public class minDistance_72编辑距离 {
         for (int row = 1; row <= m; row++) {
             for (int col = 1; col <= n; col++) {
                 if (word1.charAt(row - 1) != word2.charAt(col - 1)) {
-                    temp = 1 + dp[row][col];
                     min = Math.min(Math.min(1 + dp[row - 1][col], 1 + dp[row - 1][col - 1]),1 + dp[row][col-1]);
                 }
                 else
