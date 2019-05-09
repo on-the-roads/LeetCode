@@ -13,7 +13,7 @@ public class checkPossibility_665_非递减数列 {
     public boolean checkPossibility(int[] nums) {
        int cnt=0;
         for (int i = 1; i <nums.length ; i++) {
-            if(nums[i-1]<nums[i])
+            if(nums[i-1]<=nums[i])
                 continue;
             cnt++;//出现逆序的情况，计数器加1
             if(i-2>=0&&nums[i-2]>nums[i])
