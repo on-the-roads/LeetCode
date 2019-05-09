@@ -11,62 +11,52 @@ import java.util.List;
  */
 public class partitionLabels_763_划分字母区间 {
 //思路1：
-//        public List<Integer> partitionLabels(String s) {
-//            List<Integer> list = new ArrayList<>();
-//            if (s == null || s.length() == 0)
-//                return list;
-//            int i = 0;
-//            int index = 0;
-//            int right=0;
-//            while (i < s.length()) {
-//                int start = s.charAt(i);
-//                for (int j = s.length() - 1; j >= i + 1; j--) {//找到和起点相同的最后一个字母下标
-//                    if (start == s.charAt(j)) {
-//                        index = j;
-//                        break;
-//                    }
-//                }
-//                for (int j = i+1; j <index ; j++) {//查看此区间里的字母最后的index是否超出区间 超出则更新区间
-//                    for (int k = s.length()-1; k >=i+1 ; k--) {
-//                        if(s.charAt(k)==s.charAt(j))
-//                        {
-//                            right=Math.max(right,k);
-//                            break;
-//                        }
-//                    }
-//                }
-//                list.add(right-i+1);
-//                i=right+1;
-//            }
-//            return list;
-//        }
-
-    //思路2
-    public List<Integer> partitionLabels(String s) {
-        List<Integer> list = new ArrayList<>();
-        if (s == null || s.length() == 0)
-            return list;
-        int i = 0;
-        int[] cache = new int[26];
-        //存储每个字母最后出现的下标位置
-        for (int j = 0; j < s.length(); j++) {
-            cache[s.charAt(j) - 'a'] = j;
-        }
-        //找到和起点相同的最后一个字母 查看此区间里的字母最后的index是否超出区间 超出则更新区间
-        while (i < s.length()) {
-            int index = cache[s.charAt(i) - 'a'];//和起点相同的最后一个字母
-            int right=index;
-            for (int j = i + 1; j < index; j++) {
-                right = Math.max(right, cache[s.charAt(j) - 'a']);
+        public List<Integer> partitionLabels(String s) {
+            List<Integer> list = new ArrayList<>();
+            if (s == null || s.length() == 0)
+                return list;
+            int left = 0;
+            while (left < s.length()) {
+                int right=left;
+                for (int j = left; j <=right ; j++) {//查看此区间里的字母最后的index是否超出区间 超出则更新区间
+                    for (int k = s.length()-1; k >=left+1 ; k--) {
+                        if(s.charAt(k)==s.charAt(j))
+                        {
+                            right=Math.max(right,k);
+                            break;
+                        }
+                    }
+                }
+                list.add(right-left+1);
+                left=right+1;
             }
-        list.add(right - i + 1);
-        i = right + 1;
-    }
-        return list;
-}
+            return list;
+        }
+
+   // 思路2
+//    public List<Integer> partitionLabels(String s) {
+//        List<Integer> list = new ArrayList<>();
+//        if (s == null || s.length() == 0)
+//            return list;
+//        int[] cache = new int[26];
+//        //存储每个字母最后出现的下标位置
+//        for (int j = 0; j < s.length(); j++) {
+//            cache[s.charAt(j) - 'a'] = j;
+//        }
+//        int left = 0;
+//        while (left < s.length()) {
+//            int right=left;
+//            for (int j = left ; j <=right; j++) {
+//                right = Math.max(right, cache[s.charAt(j) - 'a']);
+//            }
+//        list.add(right - left + 1);
+//        left = right + 1;
+//    }
+//        return list;
+//}
 
     public static void main(String[] args) {
-        String s = "ababcbacadefegdehijhklij";
+        String s ="qiejxqfnqceocmy";
         List ans = new partitionLabels_763_划分字母区间().partitionLabels(s);
 
     }
