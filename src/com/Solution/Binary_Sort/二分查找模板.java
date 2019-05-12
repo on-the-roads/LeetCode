@@ -1,7 +1,7 @@
 package com.Solution.Binary_Sort;
 
 //二分查找法模板
-public class BinarySort_Template {
+public class 二分查找模板 {
     public int sort(int[] nums,int target)
     {
         if(nums==null||nums.length==0)
