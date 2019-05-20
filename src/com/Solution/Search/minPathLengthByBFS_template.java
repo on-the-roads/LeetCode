@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
-public class minPathLength_template {
+public class minPathLengthByBFS_template {
     /**
      * 自定义静态内部类表示坐标
      * @param <K>
