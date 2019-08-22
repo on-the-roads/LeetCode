@@ -18,7 +18,7 @@ public class wordBreak_139_单词拆分 {
         boolean dp[] = new boolean[n + 1];
         dp[0] = true;
         for (int i = 1; i <= n; i++) {
-            for (String word : wordDict)//注意：对字典的遍历要放在里面一层
+            for (String word : wordDict)//  注意：对字典的遍历要放在里面一层
             {
                 int len = word.length();
                 if (i >= len && word.equals(s.substring(i - len, i)))
