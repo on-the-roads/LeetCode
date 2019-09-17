@@ -2,7 +2,7 @@ package com.Solution.Top100;
 
 public class search_33_搜索旋转排序数组 {
     /**
-     * 思路：先利用二分查找旋转点（最小元素的下标）
+     * 思路：  先利用二分查找旋转点（最小元素的下标）
      * 再根据旋转点将数组分割为左右两部分有序数组，分别用二分查找
      * @param nums
      * @param target
